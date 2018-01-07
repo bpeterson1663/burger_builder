@@ -4,6 +4,7 @@ import Aux from '../../../hoc/Aux';
 import Button from '../../UI/Button/Button';
 
 const orderSummary = (props) => {
+    console.log(props);
     const ingredientSummary = Object.keys(props.ingredients).map(igKey => {
         return ( <li key={igKey}>
                     <span style={{textTransform: 'capitalize'}}>{igKey}:</span> {props.ingredients[igKey]}
@@ -18,6 +19,7 @@ const orderSummary = (props) => {
             <ul>
                 {ingredientSummary}
             </ul>
+            <p><strong>Total Price:</strong> ${props.totalPrice.toFixed(2)}</p>
             <p>Continue to Checkout?</p>
             <Button clicked={props.purchaseCancelled} btnType="Danger">CANCEL</Button>
             <Button clicked={props.purchaseContinued} btnType="Success">CONTINUE</Button>
