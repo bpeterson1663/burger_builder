@@ -1,6 +1,5 @@
 import React from 'react';
-import classes from './BurgerIngredient.css'
-import { lchmod } from 'fs';
+import classes from './BurgerIngredient.css';
 const burgerIngredient = (props) => {
     let ingredient = null;
 
